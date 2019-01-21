@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Illumine</string>
+    <string name="turn_off">Turn Off Touch After?</string>
+    <string name="off_on_low_battery">Off On Low Battery Alert?</string>
+    <string name="done">Done</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="settings">Settings</string>
+    <string name="run_in_background">Run In Background?</string>
+    <string name="turn_off_after">Turn Off After?</string>
+    <string name="service_started_message">Touch started successfully!</string>
+    <string name="service_stopped_message">Touch Stopped Successfully!</string>
+    <string name="notification_description">Displays the app notifications</string>
+    <string name="current_status">Current Status</string>
+    <string name="low_battery_notification_message">Your battery is low. The touch will be turned off. Please charge your phone.</string>
+    <string name="low_battery">Low Battery</string>
+    <string name="admob_id">ca-app-pub-1799549661054382~5442179356</string>
+    <string name="admob_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="turn_off_sound">Turn Off Sound?</string>
+
+    <string-array name="turn_off_times">
+        <item>2 Minutes</item>
+        <item>5 Minutes</item>
+        <item>15 Minutes</item>
+        <item>1 Hour</item>
+        <item>Until I turn it off myself</item>
+    </string-array>
+</resources>

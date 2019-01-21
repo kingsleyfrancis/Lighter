@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/basePadding"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/activity_setting_background"
+        android:layout_marginBottom="@dimen/basePadding"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="@string/run_in_background"
+            android:layout_marginBottom="@dimen/basePadding"
+            android:textColor="@color/colorBlack"
+            android:layout_weight="4"/>
+
+        <Switch
+            android:id="@+id/activity_setting_runInBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:gravity="end"
+            android:textOff="@string/no"
+            android:textOn="@string/yes" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/activity_setting_lowBattery"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/basePadding"
+        android:layout_below="@id/activity_setting_background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/off_on_low_battery"
+            android:textColor="@color/colorBlack"
+            android:layout_weight="4"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textOn="@string/yes"
+            android:textOff="@string/no"
+            android:layout_weight="1"
+            android:id="@+id/activity_setting_offOnLowBattery"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/activity_setting_controlSound"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/basePadding"
+        android:layout_below="@id/activity_setting_lowBattery">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/turn_off_sound"
+            android:textColor="@color/colorBlack"
+            android:layout_weight="4"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textOn="@string/yes"
+            android:textOff="@string/no"
+            android:layout_weight="1"
+            android:id="@+id/activity_setting_turnOffSound"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/activity_setting_turnAfter"
+        android:layout_marginBottom="@dimen/basePadding"
+        android:layout_below="@id/activity_setting_controlSound"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/turn_off_after"
+            android:textColor="@color/colorBlack"
+            android:layout_weight="3"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_setting_stayOnTimePeriod"
+            android:prompt="@string/turn_off"
+            android:entries="@array/turn_off_times"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:layout_marginBottom="@dimen/basePadding" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/activity_setting_buttonLayout"
+        android:layout_marginBottom="@dimen/basePadding"
+        android:layout_below="@id/activity_setting_turnAfter"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:text="@string/done"
+            android:id="@+id/activity_setting_doneButton"
+            android:layout_marginBottom="@dimen/basePadding"/>
+
+    </LinearLayout>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_main_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/halfSpace"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_id" />
+</RelativeLayout>
